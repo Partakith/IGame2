@@ -12,7 +12,7 @@ Example Image.
 It's quite simple gather up image posters and titles for your games (Not Provided via API sorry for broad support of titles vs API only)
 Select to add a new game, it will prompt you via an OpenFileDialog to select the Poster Image first. 
 Go ahead and select one for example I chose "Assassin's Creed" but PS3 cover.
-It will Prompt you after for a name, (This will save a txt file in IGame2's current directory under Games as the name you choose and effect the sorting of the game)
+It will Prompt you after for a name, (This will save a txt file in IGame2's current directory under Games as the name you choose will affect the sorting of the game)
 Then it will show the game image in your Library, when you first press the game image it will have you select the game file. 
 This is where you can select a game of any file type for example (.gba,.n64,.3ds,.exe,.etc) and so on.
 (if you make a mistake you can open the .txt file in the Games Directory and edit it)
