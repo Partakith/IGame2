@@ -2,7 +2,7 @@
 Manual Game Collection Management Tool - A place for your collected games of all sorts!
 
 Simple Beta Trial - I am not the best with getting things out and about to showcase. There is no site or discord yet.
-Time taken to build beta - 3 hours in total I would guess, it's rather simple.
+Time taken to build beta - 3 hours in total including concept time... I would guess, it's rather simple.
 
 How to use IGame2 and its purpose? (Trial Beta, all is set to change/update but may not if it does not gain traction)
 
