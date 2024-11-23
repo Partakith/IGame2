@@ -29,6 +29,11 @@ Testing and working but an experimental feature.
 
 Opinion you may have: This program is ugly and simple (Yes it's a simple trial beta that works as a baseline proof of concept for now, I will add themes and improvements when 200+ people join the ...ok maybe 50+ join the discord server I have yet to create)
 
+
+Edit: I have updated much, the next trial beta release will include, basic xbox controller support for starting games and viewing them in your collection via a controller, a settings menu, global key hook (will likely remove was for hotkeys and causes false positive flags) resizable image boxes (meaning you can set the size [likely via a slider in settings]), a right click menu for the game titles to edit them (for changing a game image/game file location/deleting a game) and more.
+
+Focus: Once I finish and polish the above a little better, I will likely create and implement several appearance updates.
+
 Are there other programs like this that are better....likely yes...almost certainly....this one is like 70kb in size though.
 
 Why choose IGame2 for your game collection....As of this trial beta.....there is no reason it's here if you want it.... :) simple as that, fits my needs thus far.
