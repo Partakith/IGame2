@@ -14,6 +14,7 @@ Some appearance updates and changes.
 
 Now using SharpDX.Input & Svg.Net to support the included svg and xbox controller use.
 
+Trial 2 - does not yet save a config for settings but trial 3 will and more settings options will be added.
 
 How to use IGame2 and its purpose? (Trial Beta, all is set to change/update)
 
