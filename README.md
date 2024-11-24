@@ -1,5 +1,5 @@
 # IGame2
-Manual Game Collection Management Tool - A place for your collected games of all sorts!
+Manual Game Collection Management Tool - A place for your collected games of all sorts! (Retro Collection Intended)
 
 Simple Beta Trial - I am not the best with getting things out and about to showcase. There is no site or discord yet.
 Time taken to build beta - 3 hours in total including concept time... I would guess, it's rather simple.
@@ -20,6 +20,7 @@ How to use IGame2 and its purpose? (Trial Beta, all is set to change/update)
 Example image trial 2 [Game Images are 600x900 if you want to achieve similar appearance but not required to be this size]
 
 https://imgur.com/rFtMgO8.png
+Images shown in collection for example purposes only.
 
 Example Image from trial 1
 [img]https://i.imgur.com/d0TTKZh.png[/img]
