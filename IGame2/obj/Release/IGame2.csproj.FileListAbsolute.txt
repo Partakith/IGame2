@@ -1,0 +1,10 @@
+C:\Users\Max\source\repos\IGame2\IGame2\bin\Release\IGame2.exe.config
+C:\Users\Max\source\repos\IGame2\IGame2\bin\Release\IGame2.exe
+C:\Users\Max\source\repos\IGame2\IGame2\bin\Release\IGame2.pdb
+C:\Users\Max\source\repos\IGame2\IGame2\obj\Release\IGame2.csproj.AssemblyReference.cache
+C:\Users\Max\source\repos\IGame2\IGame2\obj\Release\IGame2.Form1.resources
+C:\Users\Max\source\repos\IGame2\IGame2\obj\Release\IGame2.Properties.Resources.resources
+C:\Users\Max\source\repos\IGame2\IGame2\obj\Release\IGame2.csproj.GenerateResource.cache
+C:\Users\Max\source\repos\IGame2\IGame2\obj\Release\IGame2.csproj.CoreCompileInputs.cache
+C:\Users\Max\source\repos\IGame2\IGame2\obj\Release\IGame2.exe
+C:\Users\Max\source\repos\IGame2\IGame2\obj\Release\IGame2.pdb
