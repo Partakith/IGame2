@@ -8,6 +8,8 @@ Config update to actually save settings config to file and additional settings t
 Trial 3 Sample Image - https://imgur.com/7q8cqZv.png
 Trial 3 Program Icon - https://imgur.com/KBAcNeC.png
 
+Trial Release 2.9 - Seems I broke something in the controller support in this release will be fixed in next.
+
 Almost forgot - the resize is trial and definitely needs to be updated....it works but not correctly 
 when attempting to pull from the straight bottom it's wonky, so side-to-side or bottom right is best for now sorry.
 
