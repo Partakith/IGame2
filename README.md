@@ -1,5 +1,6 @@
 # IGame2 - My Retro
-Manual Game Collection Management Tool - A place for your collected games of all sorts! (Retro Collection Intended)
+Manual Game Collection Management Tool - A place for your collected games of all sorts! (Retro Collection Intended) 
+[You can of course still add any EXE based game to the list and launch it all the same]
 
 Trial 3 - Coming soon further improvements to theme and fixes on ill theme logo, removal of SVG.Net likely happening as not used anymore after Trial 2.
 Config update to actually save settings config to file and additional settings to be added. This will also remove many other dll requirments leaving only the SharpDX.dll, SharpDX.Xinput.dll, SharpDX.Xinput.xml
