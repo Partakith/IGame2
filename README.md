@@ -1,6 +1,9 @@
 # IGame2
 Manual Game Collection Management Tool - A place for your collected games of all sorts! (Retro Collection Intended)
 
+Trial 3 - Coming soon further improvements to theme and fixes on ill theme logo, removal of SVG.Net likely happening as not used anymore after Trial 2.
+Config update to actually save settings config to file and additional settings to be added. 
+
 Simple Beta Trial - I am not the best with getting things out and about to showcase. There is no site or discord yet.
 Time taken to build beta - 3 hours in total including concept time... I would guess, it's rather simple.
 
