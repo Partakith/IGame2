@@ -11,6 +11,8 @@ Trial 3 Program Icon - https://imgur.com/KBAcNeC.png
 Almost forgot - the resize is trial and definitely needs to be updated....it works but not correctly 
 when attempting to pull from the straight bottom it's wonky, so side-to-side or bottom right is best for now sorry.
 
+Also I will clean up this readme at some point and make it all more clear and remove old data.
+
 Simple Beta Trial 1 - I am not the best with getting things out and about to showcase. There is no site or discord yet.
 Time taken to build beta - 3 hours in total including concept time... I would guess, it's rather simple.
 
