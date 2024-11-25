@@ -14,6 +14,7 @@ Once game is selected controller support disables as to not interfere with gamep
 Controller must be plugged in before opening app, next trial it won't matter, if you plugged it in after, resizing the window will activate it as well without needing to close.
 
 I am considering adding in a function that runs that allows a controller key-combo to alt-f4 close your game itself for game closing and opening via this app without the need for a mouse once you get setup.
+This way if you open a game and want to quit, you can just using your controller and then be able to select another game. [the wiki has the discord join link let me know your ideas and thoughts!]
 
 Almost forgot - the resize is trial and definitely needs to be updated....it works but not correctly 
 when attempting to pull from the straight bottom it's wonky, so side-to-side or bottom right is best for now sorry.
