@@ -11,6 +11,7 @@ Trial 3 Program Icon - https://imgur.com/KBAcNeC.png
 Trial Release 2.9 - Seems I broke something in the controller support in this release will be fixed in next. Hotfix posted with controller working.
 LB/RB - Scroll up/down. A or B - Select and Launch Selected Game. Left-Stick or D-PAD - Scroll through selection left-to-right.
 Once game is selected controller support disables as to not interfere with gameplay. Clicking back into the application should reactivate it or pressing the Library button.
+Controller must be plugged in before opening app, next trial it won't matter, if you plugged it in after resizing the window will activate it as well without needing to close.
 
 Almost forgot - the resize is trial and definitely needs to be updated....it works but not correctly 
 when attempting to pull from the straight bottom it's wonky, so side-to-side or bottom right is best for now sorry.
