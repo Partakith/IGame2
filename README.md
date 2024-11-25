@@ -5,7 +5,7 @@ Trial 3 - Coming soon further improvements to theme and fixes on ill theme logo,
 Config update to actually save settings config to file and additional settings to be added. This will also remove many other dll requirments leaving only the SharpDX.dll, SharpDX.Xinput.dll, SharpDX.Xinput.xml
 
 
-Simple Beta Trial - I am not the best with getting things out and about to showcase. There is no site or discord yet.
+Simple Beta Trial 1 - I am not the best with getting things out and about to showcase. There is no site or discord yet.
 Time taken to build beta - 3 hours in total including concept time... I would guess, it's rather simple.
 
 Updated to Trial 2 -
