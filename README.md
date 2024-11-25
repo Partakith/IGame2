@@ -1,4 +1,4 @@
-# IGame2
+# IGame2 - My Retro
 Manual Game Collection Management Tool - A place for your collected games of all sorts! (Retro Collection Intended)
 
 Trial 3 - Coming soon further improvements to theme and fixes on ill theme logo, removal of SVG.Net likely happening as not used anymore after Trial 2.
