@@ -13,7 +13,7 @@ LB/RB - Scroll up/down. A or B - Select and Launch Selected Game. Left-Stick or 
 Once game is selected controller support disables as to not interfere with gameplay. Clicking back into the application should reactivate it or pressing the Library button.
 Controller must be plugged in before opening app, next trial it won't matter, if you plugged it in after, resizing the window will activate it as well without needing to close.
 
-I am considering adding in a function that runs that allows a controller key-combo to alt-f4 close your game itself for rapid game closing and opening via this app.
+I am considering adding in a function that runs that allows a controller key-combo to alt-f4 close your game itself for game closing and opening via this app without the need for a mouse once you get setup.
 
 Almost forgot - the resize is trial and definitely needs to be updated....it works but not correctly 
 when attempting to pull from the straight bottom it's wonky, so side-to-side or bottom right is best for now sorry.
