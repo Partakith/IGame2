@@ -73,16 +73,6 @@ namespace IGame2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap bigPane_A {
-            get {
-                object obj = ResourceManager.GetObject("bigPane_A", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap button_a {
             get {
                 object obj = ResourceManager.GetObject("button_a", resourceCulture);
@@ -93,9 +83,9 @@ namespace IGame2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pattern_a {
+        internal static System.Drawing.Bitmap button_a_red {
             get {
-                object obj = ResourceManager.GetObject("pattern_a", resourceCulture);
+                object obj = ResourceManager.GetObject("button_a_red", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +93,9 @@ namespace IGame2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pattern_b {
+        internal static System.Drawing.Bitmap ctrl_off {
             get {
-                object obj = ResourceManager.GetObject("pattern_b", resourceCulture);
+                object obj = ResourceManager.GetObject("ctrl_off", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +103,9 @@ namespace IGame2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pattern_c {
+        internal static System.Drawing.Bitmap ctrl_on {
             get {
-                object obj = ResourceManager.GetObject("pattern_c", resourceCulture);
+                object obj = ResourceManager.GetObject("ctrl_on", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +113,9 @@ namespace IGame2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pattern_d {
+        internal static System.Drawing.Bitmap my_retro {
             get {
-                object obj = ResourceManager.GetObject("pattern_d", resourceCulture);
+                object obj = ResourceManager.GetObject("my_retro", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +123,9 @@ namespace IGame2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pattern_e {
+        internal static System.Drawing.Bitmap my_retro_b {
             get {
-                object obj = ResourceManager.GetObject("pattern_e", resourceCulture);
+                object obj = ResourceManager.GetObject("my_retro_b", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +133,9 @@ namespace IGame2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pattern_f {
+        internal static System.Drawing.Bitmap my_retro_b_r {
             get {
-                object obj = ResourceManager.GetObject("pattern_f", resourceCulture);
+                object obj = ResourceManager.GetObject("my_retro_b_r", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +143,9 @@ namespace IGame2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SquaredEdge_A {
+        internal static System.Drawing.Bitmap my_retro_r {
             get {
-                object obj = ResourceManager.GetObject("SquaredEdge_A", resourceCulture);
+                object obj = ResourceManager.GetObject("my_retro_r", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -14,14 +14,3 @@ C:\Users\Max\source\repos\IGame2\IGame2\bin\Debug\SharpDX.pdb
 C:\Users\Max\source\repos\IGame2\IGame2\bin\Debug\SharpDX.XInput.pdb
 C:\Users\Max\source\repos\IGame2\IGame2\bin\Debug\SharpDX.XInput.xml
 C:\Users\Max\source\repos\IGame2\IGame2\obj\Debug\IGame2.csproj.Up2Date
-C:\Users\Max\source\repos\IGame2\IGame2\bin\Debug\ExCSS.dll
-C:\Users\Max\source\repos\IGame2\IGame2\bin\Debug\Svg.dll
-C:\Users\Max\source\repos\IGame2\IGame2\bin\Debug\System.Buffers.dll
-C:\Users\Max\source\repos\IGame2\IGame2\bin\Debug\System.Memory.dll
-C:\Users\Max\source\repos\IGame2\IGame2\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\Max\source\repos\IGame2\IGame2\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\Max\source\repos\IGame2\IGame2\bin\Debug\Svg.xml
-C:\Users\Max\source\repos\IGame2\IGame2\bin\Debug\System.Buffers.xml
-C:\Users\Max\source\repos\IGame2\IGame2\bin\Debug\System.Memory.xml
-C:\Users\Max\source\repos\IGame2\IGame2\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\Max\source\repos\IGame2\IGame2\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml

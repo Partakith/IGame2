@@ -14,8 +14,10 @@ using Microsoft.Win32;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 using SharpDX.XInput;
-using Svg;
 using System.Drawing.Drawing2D;
+using IGame2.Properties;
+using IGame2.Themes;
+using System.Runtime.CompilerServices;
 
 
 namespace IGame2
@@ -28,8 +30,15 @@ namespace IGame2
         private XboxController xboxController;
         private Timer controllerTimer;
 
-        private SvgDocument _svgDocument;
-        private Bitmap _rasterizedSvgBitmap;
+        public static PictureBox controllerStateElement;
+
+        public static dynamic QcontrolBar;
+        public static dynamic QcontrolLeft;
+        public static dynamic QcontrolRight;
+        public static dynamic QaddBtn;
+        public static dynamic QlibraryBtn;
+        public static dynamic QrefreshBtn;
+        public static dynamic QsettingsBtn;
 
         public Form1()
         {
@@ -51,15 +60,15 @@ namespace IGame2
             // 1. In the Form Designer (or Constructor), ensure gameLibrary is focusable:
             gameLibrary.TabStop = true;  // Allow the panel to receive focus
 
+            xboxController = new XboxController(gameLibrary);
 
-          
             this.Click += new EventHandler(FocusME);
 
             // Load the SVG document
-            _svgDocument = SvgDocument.Open(Path.Combine(Application.StartupPath, "Assets\\my_retro.svg"));
+            //_svgDocument = SvgDocument.Open(Path.Combine(Application.StartupPath, "Assets\\my_retro.svg"));
 
             // Set up a timer or resize event to regenerate the image when the form resizes
-            this.Resize += (sender, args) => RedrawSvg();
+            //this.Resize += (sender, args) => RedrawSvg();
 
             var holdPaneWidth = basePane.Width;
             var holdPaneHeight = basePane.Height;
@@ -76,25 +85,33 @@ namespace IGame2
             this.Controls.Add(basePaneB);
             basePaneB.SendToBack();
 
-            closeBtn.MouseEnter += new EventHandler(EnterForeColor);
+            closeBtn.MouseEnter += new EventHandler(Enter1ForeColor);
             closeBtn.MouseLeave += new EventHandler(ExitForeColor);
-            maxiBtn.MouseEnter += new EventHandler(EnterForeColor);
+            maxiBtn.MouseEnter += new EventHandler(Enter2ForeColor);
             maxiBtn.MouseLeave += new EventHandler(ExitForeColor);
-            miniBtn.MouseEnter += new EventHandler(EnterForeColor);
+            miniBtn.MouseEnter += new EventHandler(Enter3ForeColor);
             miniBtn.MouseLeave += new EventHandler(ExitForeColor);
+
+            gameLibrary.MouseClick += new MouseEventHandler(GLClicked);
+
+            controllerStateElement = new PictureBox();
+            controllerStateElement = setControllerState;
+            setControllerState = controllerStateElement;
+
+            //Theme
         }
 
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
             // Ensure the form starts with a minimum size
-            this.MinimumSize = new System.Drawing.Size(500, 420);  // Adjust minimum size as needed
+            this.MinimumSize = new System.Drawing.Size(515, 420);  // Adjust minimum size as needed
                                                                    //this.MaximumSize = new System.Drawing.Size(800, 800);  // Adjust maximum size as needed
 
             // Make sure the panel has focus when the form loads
             gameLibrary.Focus();
 
-            xboxController = new XboxController(gameLibrary);
+            
 
             // Set up a Timer to poll the controller every 50 ms
             controllerTimer = new Timer();
@@ -102,19 +119,100 @@ namespace IGame2
             controllerTimer.Tick += ControllerTimer_Tick;
             controllerTimer.Start();
 
-           
 
-            RedrawSvg();
 
+            // RedrawSvg();
+            controlRight.Controls.Add(closeBtn);
+            controlRight.Controls.Add(maxiBtn);
+            controlRight.Controls.Add(miniBtn);
+            miniBtn.Location = new Point(30,6);
+            maxiBtn.Location = new Point(70,6);
+            closeBtn.Location = new Point(110, 6);
+
+
+            if (File.Exists(Application.StartupPath + "\\Config\\HotKeys.txt")) {
+                checkKeys.Checked = true;
+            }
+
+            horiHide.Visible = false;
+
+
+            // Theme =========================
+            // Bitmap cLeft = Resources.my_retro;
+            // Bitmap cRight = Resources.my_retro_b;
+            // var cLeftThemed = Theme.ApplyHueShiftWG(cLeft, -40);
+            // var cRightThemed = Theme.ApplyHueShiftWG(cRight, -40);
+            // controlLeft.BackgroundImage = cLeftThemed;
+            // controlRight.BackgroundImage = cRightThemed;
+            QcontrolBar = this.controlBar;
+            QaddBtn = this.addBtn;
+            QsettingsBtn = this.settingsBtn;
+            QrefreshBtn = this.refreshBtn;
+            QlibraryBtn = this.libraryBtn;
+            QcontrolLeft = this.controlLeft;
+            QcontrolRight = this.controlRight;
+            //Theme.setTheme(Color.Red);
+            if (File.Exists(Application.StartupPath + "\\Config\\redTheme.txt")) { this.useRedTheme.Checked = true; }
+            // ===============================
 
         }
 
-        private void EnterForeColor(object sender, EventArgs e)
+        public void GLClicked(object s, MouseEventArgs e) { XboxController.ControllerActive = true; }
+
+
+        protected override async void OnResize(EventArgs e)
+        {
+
+            base.OnResize(e);
+            gameLibrary.Visible = false;
+
+            if (justSized == false){
+                ResizeFlex();
+            }
+            
+
+            // this.Invalidate(); // Repaint on resize to adjust the corners
+
+        }
+
+        public bool justSized = false;
+        public async void ResizeFlex() 
+        {
+            justSized = true;
+            await Task.Delay(3500);
+            gameLibrary.Controls.Clear();
+            LoadGames();
+            xboxController = new XboxController(gameLibrary);
+            if (gameLibrary.HorizontalScroll.Visible == true) { horiHide.Visible = true; }
+            else { horiHide.Visible = false; }
+            justSized = false;
+            gameLibrary.Visible = true;
+        }
+
+        private void Enter3ForeColor(object sender, EventArgs e)
         {
             if (sender is Control control)
             {
                 // Change the ForeColor to a random color or a specific color
-                control.ForeColor = Color.RoyalBlue; // Change this to any color you want
+                control.ForeColor = Color.DarkBlue; // Change this to any color you want
+            }
+        }
+
+        private void Enter2ForeColor(object sender, EventArgs e)
+        {
+            if (sender is Control control)
+            {
+                // Change the ForeColor to a random color or a specific color
+                control.ForeColor = Color.Yellow; // Change this to any color you want
+            }
+        }
+
+        private void Enter1ForeColor(object sender, EventArgs e)
+        {
+            if (sender is Control control)
+            {
+                // Change the ForeColor to a random color or a specific color
+                control.ForeColor = Color.Red; // Change this to any color you want
             }
         }
         private void ExitForeColor(object sender, EventArgs e)
@@ -128,6 +226,7 @@ namespace IGame2
 
         private void RedrawSvg()
         {
+            /*
             PictureBox myRetroLogo = new PictureBox();
             try { controlBar.Controls.Remove(myRetroLogo); }
             catch { }
@@ -143,7 +242,7 @@ namespace IGame2
             myRetroLogo.SizeMode = PictureBoxSizeMode.Zoom;
             controlBar.Controls.Add(myRetroLogo);
             // Trigger a repaint to display the new bitmap
-            this.Invalidate();
+            this.Invalidate(); */
    
 
         }
@@ -567,11 +666,8 @@ namespace IGame2
                     };
                     if (((Keys)vkCode).ToString() == "NumLock") //Join Tercessuinotlim
                     {
-                    if (showHideME == true)
-                    {
-                        HomeHideAsync();
-                    }
-                };
+                  
+                    };
 
 
             }
@@ -608,51 +704,71 @@ namespace IGame2
                 _proc = HookCallback;
                 // base.OnLoad(e);
                 _hookID = SetHook(_proc);
-            }
-            else { doHook = false; UnhookWindowsHookEx(_hookID); }
-        }
 
-        public bool showHideME = false;
-        private void showHideHot_CheckedChanged(object sender, EventArgs e)
-        {
-            if (showHideHot.Checked) { showHideME = true; }
-            else { showHideME = false; }
-        }
-
-        public bool FrontToBackME = false;
-        public async void HomeHideAsync() 
-        {
-            if (FrontToBackME == false)
-            {
-                if (this.InvokeRequired)
+                if (Directory.Exists(Application.StartupPath + "\\Config"))
                 {
-                    this.Invoke((MethodInvoker)(() => this.BringToFront()));
-                    FrontToBackME = true;
+                    File.WriteAllText(Application.StartupPath + "\\Config\\HotKeys.txt","");
                 }
-                else
-                {
-                    this.BringToFront();
-                    FrontToBackME = true;
+                else {
+                    Directory.CreateDirectory(Application.StartupPath + "\\Config");
+                    File.WriteAllText(Application.StartupPath + "\\Config\\HotKeys.txt", "");
                 }
             }
-            else {
-                if (this.InvokeRequired)
-                {
-                    this.Invoke((MethodInvoker)(() => this.SendToBack()));
-                    FrontToBackME = false;
-                }
-                else
-                {
-                    this.SendToBack();
-                    FrontToBackME = false;
-                }
-            }
-           
-        }
+            else { doHook = false; UnhookWindowsHookEx(_hookID); File.Delete(Application.StartupPath + "\\Config\\HotKeys.txt"); }
+        }    
 
         private void gameLibrary_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        public static bool cState = true;
+        private void setControllerState_Click(object sender, EventArgs e)
+        {
+            if (cState != true) { cState = true; }
+            else { cState = false; }
+        }
+
+        private void useRedTheme_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.useRedTheme.Checked == true) {
+
+                this.useBlueTheme.Checked = false;
+                try { File.Delete(Application.StartupPath + "\\Config\\blueTheme.txt"); }
+                catch { }
+                if (Directory.Exists(Application.StartupPath + "\\Config"))
+                {
+                    File.WriteAllText(Application.StartupPath + "\\Config\\redTheme.txt", "");
+                }
+                else
+                {
+                    Directory.CreateDirectory(Application.StartupPath + "\\Config");
+                    File.WriteAllText(Application.StartupPath + "\\Config\\redTheme.txt", "");
+                }
+                Theme.setTheme(Color.Red);
+            }
+            else { File.Delete(Application.StartupPath + "\\Config\\redTheme.txt"); }
+        }
+
+        private void useBlueTheme_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.useBlueTheme.Checked == true)
+            {
+                this.useRedTheme.Checked = false;
+                try { File.Delete(Application.StartupPath + "\\Config\\redTheme.txt"); }
+                catch { }
+                if (Directory.Exists(Application.StartupPath + "\\Config"))
+                {
+                    File.WriteAllText(Application.StartupPath + "\\Config\\blueTheme.txt", "");
+                }
+                else
+                {
+                    Directory.CreateDirectory(Application.StartupPath + "\\Config");
+                    File.WriteAllText(Application.StartupPath + "\\Config\\blueTheme.txt", "");
+                }
+                Theme.setTheme(Color.Blue);
+            }
+            else { File.Delete(Application.StartupPath + "\\Config\\blueTheme.txt"); }
         }
     }
 
@@ -757,9 +873,17 @@ namespace IGame2
         {
             if (isConnected)
             {
-                var state = controller.GetState();
-                HandleInput(state);
+                try
+                {
+                    var state = controller.GetState();
+                    HandleInput(state);
+                }
+                catch { }
+                if (Form1.cState != true) { Form1.controllerStateElement.Image = Resources.ctrl_off; }
+                else { Form1.controllerStateElement.Image = Resources.ctrl_on; }
+
             }
+            else { }
         }
 
         public static bool hasPressed = false;
@@ -775,7 +899,7 @@ namespace IGame2
 
 
 
-            if (hasPressed == false && ControllerActive == true)
+            if (hasPressed == false && ControllerActive == true && Form1.cState == true)
             {
                 // Move through ImageBoxes
                 if (leftX < -20000)  // Joystick moved left
@@ -940,10 +1064,12 @@ namespace IGame2
             this.DoubleBuffered = true;
         }
 
-        protected override void OnResize(EventArgs e)
+        protected override async void OnResize(EventArgs e)
         {
             base.OnResize(e);
+
             this.Invalidate(); // Repaint on resize to adjust the corners
+
         }
 
         protected override void OnPaint(PaintEventArgs e)
