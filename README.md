@@ -3,8 +3,11 @@ Manual Game Collection Management Tool - A place for your collected games of all
 [You can of course still add any EXE based game to the list and launch it all the same]
 
 Trial 3 - Coming soon further improvements to theme and fixes on ill theme logo, removal of SVG.Net likely happening as not used anymore after Trial 2.
-Config update to actually save settings config to file and additional settings to be added. This will also remove many other dll requirments leaving only the SharpDX.dll, SharpDX.Xinput.dll, SharpDX.Xinput.xml
+Config update to actually save settings config to file and additional settings to be added. This edition also removes many other dll requirments leaving only the SharpDX.dll, SharpDX.Xinput.dll.
 
+Trial 3.01 - Red/Blue Theming option will be adding others, user can set controllerState to on/off manually via an icon and more being worked on. As always much is set to change.
+
+Trial 3.01 Settings Menu - https://imgur.com/L5Bc4ws.png
 Trial 3 Sample Image - https://imgur.com/7q8cqZv.png
 Trial 3 Program Icon - https://imgur.com/KBAcNeC.png
 
